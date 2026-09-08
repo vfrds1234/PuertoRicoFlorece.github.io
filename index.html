@@ -4,92 +4,257 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Partido Puerto Rico Florece</title>
-<meta name="description" content="Partido Puerto Rico Florece — Floreciendo Unidos por un Puerto Rico de Oportunidades, Justicia y Esperanza.">
+<meta name="description" content="Juntos hacemos florecer a Puerto Rico.">
 <style>
-:root{--pink:#e50083;--purple:#4d1795;--gold:#d7b54a;--ink:#24133f;--soft:#f8f4fc;--white:#fff}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff}
-.top{background:var(--pink);color:#fff;text-align:center;font-weight:700;padding:9px 18px;font-size:14px}
-header{position:sticky;top:0;z-index:50;background:#fff;box-shadow:0 3px 18px #32116f1c}
-.nav{max-width:1280px;margin:auto;display:flex;align-items:center;gap:25px;padding:10px 22px}
-.logo{width:230px;height:82px;object-fit:contain;flex:0 0 auto}
-nav{margin-left:auto;display:flex;gap:18px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
-nav a{color:var(--purple);text-decoration:none;font-size:12px;font-weight:800;text-transform:uppercase}
-nav a:hover{color:var(--pink)}
-.hero{min-height:620px;background:linear-gradient(120deg,#f7e9f5 0%,#fff 48%,#d9f3fb 100%);position:relative;overflow:hidden;display:flex;align-items:center}
-.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 10% 30%,#fff 0 13%,transparent 35%),radial-gradient(circle at 92% 20%,#fff8 0 10%,transparent 34%)}
-.hero-inner{position:relative;z-index:2;max-width:1250px;margin:auto;width:100%;display:grid;grid-template-columns:1fr 1.35fr 1fr;align-items:center;gap:25px;padding:55px 30px}
-.flower{width:100%;max-width:360px;margin:auto;border-radius:28px;overflow:hidden;box-shadow:0 18px 45px #32116f20;border:7px solid #fff}
-.flower img{display:block;width:100%;height:290px;object-fit:cover}
-.center{text-align:center;background:#ffffffdd;border-radius:30px;padding:28px 25px;box-shadow:0 15px 45px #32116f14}
-.center .hero-logo{width:min(430px,100%);height:185px;object-fit:contain}
-h1{font-family:Georgia,serif;font-size:44px;color:var(--purple);margin:8px 0 12px;font-style:italic}
-.lead{font-size:18px;line-height:1.6;margin:0 auto 22px;max-width:650px}
-.buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.btn{padding:14px 24px;border-radius:999px;text-decoration:none;font-weight:800;display:inline-block}
-.btn.pink{background:var(--pink);color:#fff}.btn.outline{border:2px solid var(--purple);color:var(--purple);background:#fff}
-.pr{height:430px;max-width:390px;width:100%;margin:auto;border-radius:28px;overflow:hidden;position:relative;background:#123;box-shadow:0 18px 45px #32116f30;border:7px solid #fff}
-.pr .morro{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.pr .shade{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 42%,#24133f9c 100%)}
-.pr .flag{position:absolute;right:18px;top:18px;width:180px;height:120px;filter:drop-shadow(0 5px 8px #0007);z-index:3;background:linear-gradient(to bottom,#ed1c24 0 20%,#fff 20% 40%,#ed1c24 40% 60%,#fff 60% 80%,#ed1c24 80% 100%);overflow:hidden;border-radius:2px}
+:root{
+  --pink:#e50083;
+  --blue:#074d93;
+  --deep:#034887;
+  --pale:#f4f9fc;
+  --text:#30445c;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff}
+img{max-width:100%}
+a{text-decoration:none}
+.topbar{
+  height:30px;background:var(--pink);color:#fff;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 5%;font:italic 700 15px Georgia,serif
+}
+.social{font:normal 16px Arial;letter-spacing:7px}
+header{background:#fff;box-shadow:0 2px 8px #0002;position:sticky;top:0;z-index:30}
+.nav{
+  max-width:1280px;margin:auto;min-height:104px;padding:6px 4%;
+  display:flex;align-items:center;gap:24px
+}
+.logo{width:375px;height:92px;object-fit:contain;flex:0 0 auto}
+nav{margin-left:auto;display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:center;gap:25px}
+nav a{color:var(--blue);font-size:13px;font-weight:900;text-transform:uppercase}
+nav a.active,nav a:hover{color:var(--pink)}
+.search{
+  width:132px;height:33px;border:1px solid #dce8f0;border-radius:20px;
+  position:relative;flex:0 0 auto
+}
+.search:before{content:"";position:absolute;width:11px;height:11px;border:3px solid var(--blue);border-radius:50%;right:12px;top:7px}
+.search:after{content:"";position:absolute;width:8px;height:3px;background:var(--blue);transform:rotate(45deg);right:8px;top:21px;border-radius:2px}
 
+.hero{
+  min-height:355px;position:relative;overflow:hidden;
+  background:linear-gradient(110deg,#69c5eb,#d9f2fb 48%,#56b9e5)
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:linear-gradient(90deg,#ffffff00 40%,#ffffff22 70%,#003f8250 100%),
+             linear-gradient(180deg,#ffffff00 55%,#003f824d 100%)
+}
+.hero-scene{
+  position:absolute;inset:0;display:grid;grid-template-columns:27% 48% 25%
+}
+.hero-flower{overflow:hidden}
+.hero-flower img{width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-right{position:relative;overflow:hidden}
+.hero-right .morro{width:100%;height:100%;object-fit:cover;object-position:center}
+.flag{
+  position:absolute;right:0;top:0;width:205px;height:143px;
+  background:repeating-linear-gradient(to bottom,#ed1c24 0 28px,#fff 28px 56px);
+  filter:drop-shadow(0 6px 7px #0008);z-index:5;overflow:hidden
+}
+.flag .triangle{
+  position:absolute;left:0;top:0;
+  border-top:71px solid transparent;border-bottom:72px solid transparent;
+  border-left:105px solid #71bce6
+}
+.flag .star{position:absolute;left:31px;top:50px;color:#fff;font-size:34px;z-index:2}
+.hero-center{
+  position:relative;z-index:4;grid-column:2;min-height:355px;
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  padding:15px 18px
+}
+.hero-panel{max-width:700px}
+.hero-logo{width:min(485px,100%);height:132px;object-fit:contain}
+.hero h1{margin:0 0 10px;color:var(--blue);font:italic 700 27px Georgia,serif}
+.lead{margin:0 auto 16px;color:#fff;font-size:16px;line-height:1.45;font-weight:700;text-shadow:0 2px 4px #2e5369}
+.btn{
+  display:inline-block;padding:11px 24px;border-radius:28px;
+  font-size:13px;font-weight:900
+}
+.btn-pink{background:var(--pink);color:#fff}
+.btn-blue{background:#0b83c7;border:2px solid #fff;color:#fff}
 
+.quick{
+  max-width:1200px;margin:auto;padding:16px 0;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:15px
+}
+.quick-card{
+  min-height:123px;background:linear-gradient(180deg,#f4fbff,#eef7fc);
+  border:1px solid #e5edf3;border-radius:5px;padding:13px 20px;
+  display:grid;grid-template-columns:70px 1fr;align-items:center
+}
+.quick-icon{font-size:43px;color:var(--pink);text-align:center}
+.quick-card h2{margin:0 0 7px;color:var(--blue);font-size:18px}
+.quick-card p{margin:0;line-height:1.35;font-size:13px}
+.quick-card a{
+  display:inline-block;margin-top:9px;border:2px solid var(--pink);
+  color:var(--pink);padding:7px 20px;border-radius:22px;font-size:11px;font-weight:900
+}
+.quick-card.blue-link a{border-color:var(--blue);color:var(--blue)}
 
-.pr .flag .triangle{position:absolute;left:0;top:0;border-top:60px solid transparent;border-bottom:60px solid transparent;border-left:86px solid #75bde7;z-index:2}
-.pr .flag .star{position:absolute;left:25px;top:45px;color:#fff;font-size:29px;line-height:1;z-index:4}
-.pr .caption{position:absolute;left:22px;right:22px;bottom:20px;color:#fff;font-size:16px;font-weight:800;text-align:center;text-shadow:0 2px 5px #000}
-.section{padding:75px 25px}.section.soft{background:var(--soft)}
-.wrap{max-width:1200px;margin:auto}.title{text-align:center;color:var(--purple);font-size:34px;margin:0 0 12px}.subtitle{text-align:center;max-width:800px;margin:0 auto 38px;line-height:1.6;color:#5d4a70}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{background:#fff;border-radius:18px;padding:28px;box-shadow:0 8px 28px #32116f12;border:1px solid #eee3fa}.card .ico{font-size:38px}.card h3{color:var(--purple);margin:10px 0}.card p{line-height:1.6}.card a{color:var(--pink);font-weight:800;text-decoration:none}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.tile{padding:27px;border-radius:18px;background:#fff;border-top:5px solid var(--pink);box-shadow:0 8px 25px #32116f12}.tile h3{color:var(--purple);margin:8px 0}.tile p{line-height:1.55}.tile a{color:var(--pink);font-weight:800;text-decoration:none}
-.institution{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:center}.institution img{width:100%;height:360px;object-fit:cover;border-radius:24px}.institution p{font-size:18px;line-height:1.7}.list{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0;list-style:none}.list li:before{content:"🌺";margin-right:9px}
-.participate{background:linear-gradient(120deg,var(--purple),#6b29b2);color:#fff;text-align:center;border-radius:28px;padding:55px 25px}.participate h2{font-size:36px;margin:0 0 12px}.participate p{max-width:750px;margin:0 auto 25px;line-height:1.6}
-footer{background:#210b4b;color:#fff;padding:38px 25px;text-align:center}.footlogo{width:250px;height:95px;object-fit:contain;background:#fff;border-radius:10px;margin-bottom:12px}.gold{color:#f0d46e}
-@media(max-width:950px){.nav{flex-direction:column}.logo{width:260px}nav{margin:auto;justify-content:center}.hero-inner{grid-template-columns:1fr}.flower,.pr{max-width:500px}.cards,.grid{grid-template-columns:1fr}.institution{grid-template-columns:1fr}.center{order:-1}h1{font-size:34px}.section{padding:55px 18px}}
+.modules{max-width:1200px;margin:0 auto 18px;display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.module{background:#f8fbfd;border-radius:5px;overflow:hidden;box-shadow:0 2px 7px #0002;min-height:218px}
+.module-photo{height:103px;overflow:hidden;background:#d9edf6}
+.module-photo img{width:100%;height:100%;object-fit:cover}
+.module-body{padding:9px 12px}
+.module h3{margin:0 0 7px;color:var(--blue);font-size:11.5px;line-height:1.17;text-transform:uppercase}
+.module p{margin:0 0 9px;font-size:10.5px;line-height:1.35}
+.module a{color:var(--pink);font-size:10.5px;font-weight:900}
+
+.institution{
+  max-width:1200px;margin:auto;display:grid;grid-template-columns:44% 56%;
+  background:#fff
+}
+.institution-image{min-height:182px;overflow:hidden}
+.institution-image img{width:100%;height:100%;object-fit:cover}
+.institution-content{
+  display:grid;grid-template-columns:1fr 265px;gap:22px;align-items:center;padding:18px 28px
+}
+.institution-content h2{margin:0 0 8px;color:var(--blue);font-size:19px}
+.institution-content p{font-size:12px;line-height:1.5;margin:0 0 10px}
+.institution-content .cta{
+  display:inline-block;background:var(--pink);color:#fff;padding:9px 18px;border-radius:22px;font-size:11px;font-weight:900
+}
+.list{border-left:1px solid #bdd0df;padding-left:22px;list-style:none;margin:0;color:var(--blue);font-size:11px;line-height:1.9}
+.list li:before{content:"🌺";margin-right:7px}
+
+footer{
+  margin-top:0;background:var(--deep);color:#fff;
+  min-height:77px;padding:10px 4%;display:grid;
+  grid-template-columns:250px 1fr 320px;gap:20px;align-items:center
+}
+.footlogo{width:210px;height:62px;object-fit:contain;background:#fff;border-radius:6px}
+.footer-center{text-align:center;font:italic 18px Georgia,serif}
+.footer-right{text-align:right;font-size:9px;line-height:1.5}
+
+.section-pad{padding:18px 4%;background:var(--pale)}
+.simple-section{max-width:1200px;margin:auto;text-align:center}
+.simple-section h2{color:var(--blue);margin:0 0 8px}
+.simple-section p{line-height:1.55}
+
+@media(max-width:1150px){
+  .nav{flex-direction:column;gap:2px}
+  .logo{width:310px}
+  nav{margin:auto;justify-content:center;gap:14px}
+  .search{display:none}
+  .modules{grid-template-columns:repeat(3,1fr);padding:0 4%}
+  .quick{padding:16px 4%}
+  .institution{margin:0 4%}
+}
+@media(max-width:700px){
+  .topbar{font-size:12px}.social{display:none}
+  .logo{width:300px;height:75px}.nav{min-height:108px}
+  nav{gap:8px 13px}
+  .hero{min-height:430px}.hero-scene{display:block}
+  .hero-flower{position:absolute;left:0;bottom:0;width:40%;height:53%;opacity:.9}
+  .hero-right{position:absolute;right:0;top:0;width:45%;height:53%;opacity:.92}
+  .flag{width:130px;height:88px}
+  .flag .triangle{border-top-width:44px;border-bottom-width:44px;border-left-width:65px}
+  .flag .star{font-size:21px;left:20px;top:30px}
+  .hero-center{min-height:430px;padding:35px 12px 20px}
+  .hero-logo{height:118px}.hero h1{font-size:22px}.lead{font-size:14px}
+  .quick{grid-template-columns:1fr;padding:12px}.modules{grid-template-columns:1fr 1fr;padding:0 12px}
+  .institution{grid-template-columns:1fr;margin:0}
+  .institution-content{grid-template-columns:1fr;padding:22px}
+  .list{border-left:0;border-top:1px solid #bdd0df;padding:13px 0 0}
+  footer{grid-template-columns:1fr;text-align:center}.footer-right{text-align:center}
+}
 </style>
 </head>
 <body>
-<div class="top">Floreciendo Unidos por un Puerto Rico de Oportunidades, Justicia y Esperanza.</div>
-<header><div class="nav">
-<img class="logo" src="logo-oficial.jpg" alt="Partido Puerto Rico Florece">
-<nav>
-<a href="#inicio">Inicio</a><a href="#quienes">Quiénes somos</a><a href="#propuestas">Propuestas</a><a href="#principios">Principios</a><a href="#organizacion">Organización</a><a href="#municipios">Municipios</a><a href="#noticias">Noticias</a><a href="#documentos">Documentos</a><a href="#participa">Participa</a><a href="#contacto">Contacto</a>
-</nav></div></header>
+<div class="topbar">
+  <span>Juntos hacemos florecer a Puerto Rico</span>
+  <span class="social">f　◎　𝕏　▶　✉</span>
+</div>
+
+<header>
+  <div class="nav">
+    <img class="logo" src="logo-oficial.jpg" alt="Partido Puerto Rico Florece">
+    <nav>
+      <a class="active" href="#inicio">Inicio</a>
+      <a href="#quienes">Quiénes somos</a>
+      <a href="#propuestas">Propuestas</a>
+      <a href="#principios">Principios</a>
+      <a href="#organizacion">Organización</a>
+      <a href="#municipios">Municipios</a>
+      <a href="#noticias">Noticias</a>
+      <a href="#documentos">Documentos</a>
+      <a href="#participa">Participa</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="search" aria-label="Buscar"></div>
+  </div>
+</header>
 
 <main id="inicio">
-<section class="hero"><div class="hero-inner">
-<div class="flower"><img src="flor-de-maga.png" alt="Flor de Maga"></div>
-<div class="center"><img class="hero-logo" src="607167ba-d7f4-4e2a-a9f6-6d1c5930d143.png" alt="Partido Puerto Rico Florece"><h1>Una nueva visión para Puerto Rico</h1><p class="lead">Un Puerto Rico que florece con esperanza, trabajo, justicia, transparencia y oportunidades para todos.</p><div class="buttons"><a class="btn pink" href="#propuestas">Conoce nuestro proyecto</a><a class="btn outline" href="#participa">Participa</a></div></div>
-<div class="pr">
-<img class="morro" src="https://www.nps.gov/articles/images/60gettingch.jpg?autorotate=false&amp;maxwidth=1300" alt="Castillo San Felipe del Morro, San Juan, Puerto Rico">
-<div class="shade"></div>
-.pr .flag .triangle{position:absolute;left:0;top:0;border-top:60px solid transparent;border-bottom:60px solid transparent;border-left:86px solid #75bde7;z-index:2}
-<div class="caption">Castillo San Felipe del Morro<br>San Juan, Puerto Rico</div>
-</div>
-</div></section>
+<section class="hero">
+  <div class="hero-scene">
+    <div class="hero-flower"><img src="flor-de-maga.png" alt="Flor de Maga roja"></div>
+    <div></div>
+    <div class="hero-right">
+      <img class="morro" src="https://www.nps.gov/articles/images/60gettingch.jpg?autorotate=false&amp;maxwidth=1300" alt="Castillo San Felipe del Morro">
+      <div class="flag"><div class="triangle"></div><div class="star">★</div></div>
+    </div>
+  </div>
+  <div class="hero-bg"></div>
+  <div class="hero-center">
+    <div class="hero-panel">
+      <img class="hero-logo" src="607167ba-d7f4-4e2a-a9f6-6d1c5930d143.png" alt="Partido Puerto Rico Florece">
+      <h1>Una nueva visión para Puerto Rico</h1>
+      <p class="lead">Un Puerto Rico que florece con esperanza, trabajo, justicia, transparencia y oportunidades para todos.</p>
+      <a class="btn btn-pink" href="#propuestas">CONOCE NUESTRO PROYECTO</a>
+      <a class="btn btn-blue" href="#participa">PARTICIPA　→</a>
+    </div>
+  </div>
+</section>
 
-<section id="quienes" class="section"><div class="wrap"><h2 class="title">Partido Puerto Rico Florece</h2><p class="subtitle">Una propuesta política e institucional centrada en el servicio al pueblo, la transparencia, las oportunidades y el fortalecimiento de Puerto Rico.</p>
-<div class="cards"><article class="card"><div class="ico">🌺</div><h3>Nuestra visión</h3><p>Un Puerto Rico moderno, próspero, seguro y con instituciones eficientes al servicio de la ciudadanía.</p></article>
-<article class="card"><div class="ico">🤝</div><h3>Nuestro compromiso</h3><p>Trabajar por una transformación responsable de Puerto Rico, fortaleciendo sus comunidades e instituciones.</p></article>
-<article class="card"><div class="ico">👥</div><h3>Participación ciudadana</h3><p>El futuro de Puerto Rico se construye con la participación activa de su gente.</p></article></div></div></section>
+<section id="quienes">
+  <div class="quick">
+    <article class="quick-card"><div class="quick-icon">🌺</div><div><h2>NUESTRA VISIÓN</h2><p>Un Puerto Rico moderno, próspero, seguro y con instituciones eficientes al servicio de la ciudadanía.</p><a href="#principios">CONOCE MÁS　→</a></div></article>
+    <article class="quick-card"><div class="quick-icon">🤝</div><div><h2>NUESTRO COMPROMISO</h2><p>Trabajar por una transformación responsable de Puerto Rico, fortaleciendo sus comunidades y sus instituciones.</p><a class="blue-link" href="#propuestas">CONOCE MÁS　→</a></div></article>
+    <article class="quick-card"><div class="quick-icon">👥</div><div><h2>PARTICIPA</h2><p>El futuro de Puerto Rico se construye con la participación de su gente.</p><a href="#participa">ÚNETE AL PARTIDO　→</a></div></article>
+  </div>
+</section>
 
-<section id="propuestas" class="section soft"><div class="wrap"><h2 class="title">Áreas principales del proyecto</h2><p class="subtitle">Conoce las áreas que formarán parte del portal oficial y de la plataforma programática.</p>
-<div class="grid">
-<article class="tile"><h3>📜 Reforma Constitucional</h3><p>Propuesta para transformar la Asamblea Legislativa en una legislatura unicameral.</p><a href="#documentos">Ver propuesta →</a></article>
-<article class="tile"><h3>📚 Biblioteca Digital</h3><p>Acceso organizado a documentos, tomos, reglamentos y estudios oficiales.</p><a href="#documentos">Ver documentos →</a></article>
-<article class="tile" id="municipios"><h3>📍 Municipios</h3><p>Un espacio para presentar proyectos y prioridades de cada municipio de Puerto Rico.</p><a href="#municipios">Explorar →</a></article>
-<article class="tile" id="organizacion"><h3>👥 Organización</h3><p>Estructura, comités, responsabilidades y participación dentro del partido.</p><a href="#organizacion">Conocer →</a></article>
-<article class="tile" id="noticias"><h3>📣 Noticias</h3><p>Comunicados, actividades, anuncios y novedades del Partido Puerto Rico Florece.</p><a href="#noticias">Ver noticias →</a></article>
-<article class="tile"><h3>📅 Calendario</h3><p>Próximamente: reuniones, actividades y eventos en Puerto Rico.</p><a href="#participa">Participar →</a></article>
-</div></div></section>
+<section id="propuestas">
+  <div class="modules">
+    <article class="module"><div class="module-photo"><img src="https://www.nps.gov/articles/images/60gettingch.jpg?autorotate=false&amp;maxwidth=1300" alt="Reforma constitucional"></div><div class="module-body"><h3>📜 Propuesta de Reforma Constitucional</h3><p>Transformación de la Asamblea Legislativa en una legislatura unicameral.</p><a href="#documentos">Ver más →</a></div></article>
+    <article class="module"><div class="module-photo"><img src="flor-de-maga.png" alt="Biblioteca Digital"></div><div class="module-body"><h3>📚 Biblioteca Digital</h3><p>Conoce nuestros documentos oficiales, tomos, reglamentos, plataforma de gobierno y más.</p><a href="#documentos">Ver más →</a></div></article>
+    <article class="module" id="municipios"><div class="module-photo"><img src="https://www.nps.gov/articles/images/60gettingch.jpg?autorotate=false&amp;maxwidth=1300" alt="Municipios"></div><div class="module-body"><h3>📍 Puerto Rico Florece por Municipios</h3><p>Propuestas y proyectos para cada municipio de nuestra isla.</p><a href="#municipios">Ver más →</a></div></article>
+    <article class="module" id="organizacion"><div class="module-photo"><img src="flor-de-maga.png" alt="Organización"></div><div class="module-body"><h3>👥 Organización</h3><p>Estructura, comités y equipo del Partido Puerto Rico Florece.</p><a href="#organizacion">Ver más →</a></div></article>
+    <article class="module" id="noticias"><div class="module-photo"><img src="https://www.nps.gov/articles/images/60gettingch.jpg?autorotate=false&amp;maxwidth=1300" alt="Noticias"></div><div class="module-body"><h3>📣 Noticias y Comunicados</h3><p>Entérate de nuestras actividades, logros y próximos eventos.</p><a href="#noticias">Ver más →</a></div></article>
+    <article class="module"><div class="module-photo"><img src="https://www.nps.gov/articles/images/60gettingch.jpg?autorotate=false&amp;maxwidth=1300" alt="Calendario"></div><div class="module-body"><h3>📅 Calendario</h3><p>Eventos, reuniones y actividades en todo Puerto Rico.</p><a href="#participa">Ver más →</a></div></article>
+  </div>
+</section>
 
-<section id="principios" class="section"><div class="wrap institution"><img src="flor-de-maga.png" alt="Flor de Maga"><div><h2 class="title" style="text-align:left">Nuestra propuesta institucional</h2><p>Un gobierno al servicio del pueblo, con instituciones fuertes, transparentes y eficientes, que impulse el desarrollo económico, la educación, la salud, la seguridad y la justicia.</p><ul class="list"><li>Educación de excelencia</li><li>Salud y bienestar</li><li>Seguridad ciudadana</li><li>Desarrollo económico</li><li>Infraestructura moderna</li><li>Medio ambiente y sostenibilidad</li></ul></div></div></section>
+<section id="principios">
+  <div class="institution">
+    <div class="institution-image"><img src="flor-de-maga.png" alt="Flor de Maga roja"></div>
+    <div class="institution-content">
+      <div><h2>NUESTRA PROPUESTA INSTITUCIONAL</h2><p>Un gobierno al servicio del pueblo, con instituciones fuertes, transparentes y eficientes, que impulse el desarrollo económico, la educación, la salud, la seguridad y la justicia.</p><a class="cta" href="#propuestas">VER PROPUESTAS　→</a></div>
+      <ul class="list"><li>Educación de excelencia</li><li>Salud y bienestar</li><li>Seguridad ciudadana</li><li>Desarrollo económico</li><li>Infraestructura moderna</li><li>Medio ambiente y sostenibilidad</li></ul>
+    </div>
+  </div>
+</section>
 
-<section id="documentos" class="section soft"><div class="wrap"><h2 class="title">Documentos y transparencia</h2><p class="subtitle">Esta sección será el centro documental del partido: propuestas, reglamentos, estudios, informes y publicaciones.</p><div class="participate"><h2>Una plataforma abierta al pueblo</h2><p>Queremos que la ciudadanía pueda conocer nuestras ideas, estudiar nuestras propuestas y participar en el desarrollo del proyecto.</p><a class="btn pink" href="#participa">Participa</a></div></div></section>
-
-<section id="participa" class="section"><div class="wrap"><div class="participate"><h2>Construyamos juntos el Puerto Rico que queremos</h2><p>Próximamente añadiremos el formulario oficial de participación, registro de voluntarios y canales de comunicación.</p><a class="btn pink" href="#contacto">Quiero participar</a></div></div></section>
-
-<section id="contacto" class="section soft"><div class="wrap"><h2 class="title">Contacto</h2><p class="subtitle">Esta sección está preparada para incorporar el correo electrónico oficial, teléfono, redes sociales y formulario de contacto.</p></div></section>
+<section id="documentos" class="section-pad"><div class="simple-section"><h2>DOCUMENTOS Y TRANSPARENCIA</h2><p>Una plataforma abierta al pueblo para conocer nuestras ideas, estudiar nuestras propuestas y participar en el desarrollo del proyecto.</p></div></section>
+<section id="participa" class="section-pad"><div class="simple-section"><h2>CONSTRUYAMOS JUNTOS EL PUERTO RICO QUE QUEREMOS</h2><p>Próximamente añadiremos el formulario oficial de participación, registro de voluntarios y canales de comunicación.</p><a class="btn btn-pink" href="#contacto">QUIERO PARTICIPAR</a></div></section>
+<section id="contacto" class="section-pad"><div class="simple-section"><h2>CONTACTO</h2><p>Esta sección está preparada para incorporar el correo electrónico oficial, teléfono, redes sociales y formulario de contacto.</p></div></section>
 </main>
-<footer><img class="footlogo" src="logo-oficial.jpg" alt="Partido Puerto Rico Florece"><p>Floreciendo Unidos por un Puerto Rico de <span class="gold">Oportunidades, Justicia y Esperanza.</span></p><small>© 2026 Partido Puerto Rico Florece</small></footer>
+
+<footer>
+  <img class="footlogo" src="logo-oficial.jpg" alt="Partido Puerto Rico Florece">
+  <div class="footer-center">Juntos hacemos florecer a Puerto Rico</div>
+  <div class="footer-right">Términos de uso　|　Política de privacidad<br>© 2026 Partido Puerto Rico Florece. Todos los derechos reservados.</div>
+</footer>
 </body>
 </html>
